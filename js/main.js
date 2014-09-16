@@ -27,7 +27,7 @@ $(document).ready(function() {
 
   // then attach a click listener that displays the
   // div matching nav item being clicked
-  $('#navbar > li').each(function(i, li) {
+  $('#navbar li').each(function(i, li) {
     $(li).click(function(event) {
       // the post-hashtag part of the URL assigned to first <a/> child
       // of the current list element under #nav
