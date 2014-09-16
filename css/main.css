@@ -1,0 +1,274 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Common CSS properties */
+
+body {
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #666666;
+}
+
+/* Header area: logo and navigation */
+
+#header {
+  background-image: url('../img/common/branches.png');
+  background-size: cover;
+}
+
+#logo {
+  height: 160px;
+}
+
+#navbar {
+  float: right;
+}
+
+@media(max-width: 979px) {
+  #navbar {
+    margin-top: 0em;
+  }
+}
+
+@media(min-width: 979px) {
+  #navbar {
+    margin-top: 11em;
+  }
+}
+
+#navbar li {
+  margin: 0px 5px -1px;
+}
+
+#navbar li a {
+  color: #cfcfcf;
+  background-color: #e67100;
+  padding: 5px 10px 3px;
+}
+
+#navbar li.active a {
+  background-color: #ffffff;
+  color: #e67100;
+}
+
+/* Middle area: content as white cards */
+
+.carousel-inner .item img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#middle {
+	background-image: url(../img/common/nvns_bg_reptX.jpg);
+	background-repeat: repeat-x;
+  background-color: #f09b00;
+}
+
+.frame {
+  padding: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.content {
+  overflow: hidden;
+	width: 900px;
+  background-color: #ffffff;
+  border: solid #000000 1px;
+	margin-top: 7px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 8px;
+	line-height: 1.4em;
+}
+	
+.col {
+  display: inline-block;
+	padding: 10px;
+}
+
+.col img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 10px;
+}
+
+.left {
+  float: left;
+}
+
+.center {
+  width: 100%;
+  text-align: center;
+}
+
+.right {
+  float: right;
+}
+
+.full {
+  width: 100%;
+}
+
+.xsmall {
+  width: 240px;
+}
+
+.small {
+  width: 340px;
+}
+
+.large {
+  width: 550px;
+}
+
+.xlarge {
+  width: 650px;
+}
+
+.schedule .from,
+.schedule .to {
+  font-weight: bold;
+  text-align: center;
+}
+
+.schedule .activity {
+  padding-left: 10px;
+}
+
+img#flyer {
+  width: 200px;
+  padding-top: 10px;
+}
+
+img#annie {
+  width: 180px;
+  margin-bottom: 0px;
+}
+
+p.left {
+  text-align: left;
+}
+
+p.centered {
+  text-align: center;
+}
+
+p.right {
+  text-align: right;
+}
+
+p.tight {
+  padding: 0;
+  margin: 2px 0 2px 0;
+}
+
+#paypal {
+  margin-left: 190px;
+}
+
+#paypal_front_page {
+  padding-top: 20px;
+  padding-right: 16px;
+}
+
+#thanks {
+  padding-top: 30px;
+}
+
+#gmap {
+  padding-left: 20px;
+}
+
+#footer {
+	color: #8D8D8D;
+	font-size: 85%;
+	text-align: center;
+}
+
+h1, h2, h3 {
+  color: #FF5300;
+  margin: 0;
+  padding: 5px 15px 3px 8px;
+  background-color: #ffffff;
+}
+
+p {
+  padding: 5px 15px 3px 8px;
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  border-style: none;
+}
+
+a:link {
+  text-decoration: none;
+  color:#BA0000;
+} 
+
+a:visited {
+  text-decoration: none;
+  color:#BA0000;
+} 
+
+a:hover {
+  text-decoration: none;
+  color:#BA0000;
+}
+
+a.underline {
+  text-decoration: underline;
+}
+
+#paypal_cookbook {
+  border: solid 1px #dddddd;
+  padding: 10px;
+  overflow: auto;
+}
+
+#paypal_cookbook #shipping {
+  width: 55%;
+  margin: 0 5%;
+  float: left;
+}
+
+#paypal_cookbook #buy_now {
+  width: 35%;
+  float: right;
+}
+
+/* Auction */
+
+#auction {
+  font-size: larger;
+}
+
+span.tight p {
+  margin-bottom: 4px;
+}
+
+#auction h1 {
+  text-align: center;
+  line-height: 130%;
+  margin-bottom: 18px;
+}
+
+#auction #buy_now {
+  margin: 0 10%;
+  float: right;
+}
+
+#auction #flyer {
+  width: 620px;
+  padding: 3px 0px 3px 3px;
+}
+
+#auction #bluesky {
+  width: 275px;
+  padding: 4px 3px 3px 0px;
+}
