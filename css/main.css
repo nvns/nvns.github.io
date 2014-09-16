@@ -23,6 +23,7 @@ body {
 
 #navbar {
   float: right;
+  font-size: 2em;
 }
 
 @media(max-width: 1024px) {
@@ -33,7 +34,7 @@ body {
 
 @media(min-width: 1024px) {
   #navbar {
-    margin-top: 11em;
+    margin-top: 5em;
   }
 }
 
