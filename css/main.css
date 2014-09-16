@@ -25,13 +25,13 @@ body {
   float: right;
 }
 
-@media(max-width: 979px) {
+@media(max-width: 1024px) {
   #navbar {
     margin-top: 0em;
   }
 }
 
-@media(min-width: 979px) {
+@media(min-width: 1024px) {
   #navbar {
     margin-top: 11em;
   }
