@@ -10,6 +10,10 @@ body {
   color: #666666;
 }
 
+.right {
+  float: right;
+}
+
 /* Header area: logo and navigation */
 
 #header {
