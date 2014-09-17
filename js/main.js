@@ -12,7 +12,7 @@ $(document).ready(function() {
     });
 
     // hide all but requested div.nav-target on the page
-    var div = $('div' + htag + '.nav-target').toggleClass('hidden', false);
+    var div = $('div' + htag + '_target.nav-target').toggleClass('hidden', false);
     console.log('Showing ' + $(div).attr('id'));
     $(div).siblings('.nav-target').each(function(i, div) {
       console.log('Hiding ' + $(div).attr('id'));
