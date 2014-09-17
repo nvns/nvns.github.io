@@ -33,7 +33,7 @@ $(document).ready(function() {
       // of the current list element under #nav
       var tag = $(event.currentTarget).children('a').first().attr('href').split('#').pop();
       showNavTargetDiv('#' + tag);
-      event.preventDefault();
+      //event.preventDefault();
     });
   });
 });
