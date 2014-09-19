@@ -73,7 +73,7 @@ p.left {
   text-align: left;
 }
 
-p.centered {
+.centered {
   text-align: center;
 }
 
