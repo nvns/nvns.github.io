@@ -4,6 +4,7 @@
   #logo      { height:     4.0em; }
   #navbar    { font-size:  0.9em; }
   #navbar ul { margin-top: 0.0em; }
+  .frame     { padding:     10px; }
 }
 
 @media (min-width: 768px) {
@@ -11,6 +12,7 @@
                margin-top: 0.7em; }
   #navbar    { font-size:  1.2em; }
   #navbar ul { margin-top: 2.0em; }
+  .frame     { padding:     15px; }
 }
 
 @media (min-width: 992px) {
@@ -18,6 +20,7 @@
                margin-top: 0.5em; }
   #navbar    { font-size:  1.3em; }
   #navbar ul { margin-top: 2.4em; }
+  .frame     { padding:     20px; }
 }
 
 @media (min-width: 1200px) {
@@ -25,6 +28,7 @@
                margin-top: 0.4em; }
   #navbar    { font-size:  1.5em; }
   #navbar ul { margin-top: 2.8em; }
+  .frame     { padding:     30px; }
 }
 
 /* Common CSS properties */
@@ -33,10 +37,6 @@ body {
   background-color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   color: #666666;
-}
-
-.frame {
-  padding: 30px;
 }
 
 /* Header area: logo and navigation */
