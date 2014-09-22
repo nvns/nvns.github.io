@@ -15,8 +15,8 @@
 
 @media (min-width: 992px) {
   #logo      { height:     6.0em;
-               margin-top: 1.2em; }
-  #navbar    { font-size:  1.0em; }
+               margin-top: 0.5em; }
+  #navbar    { font-size:  1.3em; }
   #navbar ul { margin-top: 2.4em; }
 }
 
