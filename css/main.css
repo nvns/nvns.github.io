@@ -1,125 +1,11 @@
 @charset "UTF-8";
 
-@media (min-width: 0px) {
-  #logo      { height:     4.0em; }
-  #navbar    { font-size:  0.9em; }
-  #navbar ul { margin-top: 0.0em; }
-  .frame     { padding:     10px; }
-}
-
-@media (min-width: 768px) {
-  #logo      { height:     5.0em;
-               margin-top: 0.7em; }
-  #navbar    { font-size:  1.2em; }
-  #navbar ul { margin-top: 2.0em; }
-  .frame     { padding:     15px; }
-}
-
-@media (min-width: 992px) {
-  #logo      { height:     6.0em;
-               margin-top: 0.5em; }
-  #navbar    { font-size:  1.3em; }
-  #navbar ul { margin-top: 2.4em; }
-  .frame     { padding:     20px; }
-}
-
-@media (min-width: 1200px) {
-  #logo      { height:     7.0em;
-               margin-top: 0.4em; }
-  #navbar    { font-size:  1.5em; }
-  #navbar ul { margin-top: 2.8em; }
-  .frame     { padding:     30px; }
-}
-
 /* Common CSS properties */
 
 body {
   background-color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   color: #666666;
-}
-
-/* Header area: logo and navigation */
-
-.navbar {
-  background-image: url('../img/common/branches.png');
-  background-size: cover;
-}
-
-#navbar li a {
-  color: #cfcfcf;
-}
-
-#navbar li.active a {
-  color: #e67100;
-  background-color: #ffffff;
-}
-
-/* Middle area: content as white cards */
-
-.carousel-inner .item img {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.schedule .from,
-.schedule .to {
-  font-weight: bold;
-  text-align: center;
-}
-
-.schedule .activity {
-  padding-left: 10px;
-}
-
-img#flyer {
-  width: 200px;
-  padding-top: 10px;
-}
-
-img#annie {
-  width: 180px;
-  margin-bottom: 0px;
-}
-
-p.left {
-  text-align: left;
-}
-
-.centered {
-  text-align: center;
-}
-
-p.right {
-  text-align: right;
-}
-
-p.tight {
-  padding: 0;
-  margin: 2px 0 2px 0;
-}
-
-#paypal {
-  margin-left: 190px;
-}
-
-#paypal_front_page {
-  padding-top: 20px;
-  padding-right: 16px;
-}
-
-#thanks {
-  padding-top: 30px;
-}
-
-#gmap {
-  padding-left: 20px;
-}
-
-#footer {
-	color: #8D8D8D;
-	font-size: 85%;
-	text-align: center;
 }
 
 h1, h2, h3 {
@@ -154,54 +40,57 @@ a:hover {
   color:#BA0000;
 }
 
-a.underline {
-  text-decoration: underline;
+/* Per-size CSS definitions */
+
+@media (min-width: 0px) {
+  #logo      { height:     4.0em; }
+  #navbar    { font-size:  0.9em; }
+  #navbar ul { margin-top: 0.0em; }
+  .frame     { padding:     10px; }
 }
 
-#paypal_cookbook {
-  border: solid 1px #dddddd;
-  padding: 10px;
-  overflow: auto;
+@media (min-width: 768px) {
+  #logo      { height:     5.0em;
+               margin-top: 0.7em; }
+  #navbar    { font-size:  1.2em; }
+  #navbar ul { margin-top: 2.0em; }
+  .frame     { padding:     15px; }
 }
 
-#paypal_cookbook #shipping {
-  width: 55%;
-  margin: 0 5%;
-  float: left;
+@media (min-width: 992px) {
+  #logo      { height:     6.0em;
+               margin-top: 0.5em; }
+  #navbar    { font-size:  1.3em; }
+  #navbar ul { margin-top: 2.4em; }
+  .frame     { padding:     20px; }
 }
 
-#paypal_cookbook #buy_now {
-  width: 35%;
-  float: right;
+@media (min-width: 1200px) {
+  #logo      { height:     7.0em;
+               margin-top: 0.4em; }
+  #navbar    { font-size:  1.5em; }
+  #navbar ul { margin-top: 2.8em; }
+  .frame     { padding:     30px; }
 }
 
-/* Auction */
+/* Bootstrap overrides */
 
-#auction {
-  font-size: larger;
+.navbar {
+  background-image: url('../img/common/branches.png');
+  background-size: cover;
 }
 
-span.tight p {
-  margin-bottom: 4px;
+.navbar ul.navbar-nav > li > a {
+  color: #cfcfcf;
 }
 
-#auction h1 {
+.navbar ul.navbar-nav > li.active > a {
+  color: #e67100;
+  background-color: #ffffff;
+}
+
+/* Class definitions */
+
+.centered {
   text-align: center;
-  line-height: 130%;
-  margin-bottom: 18px;
-}
-
-#auction #buy_now {
-  margin: 0 10%;
-  float: right;
-}
-
-#auction #flyer {
-  width: 620px;
-  padding: 3px 0px 3px 3px;
-}
-
-#auction #bluesky {
-  width: 275px;
-  padding: 4px 3px 3px 0px;
 }
