@@ -75,22 +75,26 @@ a:hover {
 
 /* Bootstrap overrides */
 
-.navbar {
+.navbar.navbar-default {
   background-image: url('../img/common/branches.png');
   background-size: cover;
 }
 
-.navbar ul.navbar-nav > li > a {
+button.navbar-toggle {
+  background-color: #cccccc;
+}
+
+.navbar.navbar-default ul.navbar-nav > li > a {
   color: #cfcfcf;
 }
 
-.navbar ul.navbar-nav > li.active > a {
+.navbar.navbar-default ul.navbar-nav > li.active > a {
   color: #e67100;
   background-color: #ffffff;
 }
 
-.navbar-toggle {
-  background-color: #FF5300 ;
+.navbar.navbar-default ul.navbar-nav > li > a:hover {
+  color: #FF5300;
 }
 
 /* Class definitions */
@@ -98,3 +102,5 @@ a:hover {
 .centered {
   text-align: center;
 }
+
+/* Snowflakes */
