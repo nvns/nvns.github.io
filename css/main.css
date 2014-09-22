@@ -1,12 +1,37 @@
 @charset "UTF-8";
-/* CSS Document */
+
+@media (min-width: 0px) {
+  #logo      { height:     4.0em; }
+  #navbar    { font-size:  0.9em; }
+  #navbar ul { margin-top: 0.0em; }
+}
+
+@media (min-width: 768px) {
+  #logo      { height:     5.0em;
+               margin-top: 0.7em; }
+  #navbar    { font-size:  1.2em; }
+  #navbar ul { margin-top: 2.0em; }
+}
+
+@media (min-width: 992px) {
+  #logo      { height:     6.0em;
+               margin-top: 1.2em; }
+  #navbar    { font-size:  1.0em; }
+  #navbar ul { margin-top: 2.4em; }
+}
+
+@media (min-width: 1200px) {
+  #logo      { height:     7.0em;
+               margin-top: 0.4em; }
+  #navbar    { font-size:  1.5em; }
+  #navbar ul { margin-top: 2.8em; }
+}
 
 /* Common CSS properties */
 
 body {
   background-color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
-  /* font-size: 13px; */
   color: #666666;
 }
 
@@ -16,21 +41,9 @@ body {
 
 /* Header area: logo and navigation */
 
-#header {
+.navbar {
   background-image: url('../img/common/branches.png');
   background-size: cover;
-}
-
-#logo {
-  height: 160px;
-}
-
-#navbar {
-  font-size: 1.8em;
-}
-
-#navbar ul {
-  margin-top: 2.5em;
 }
 
 #navbar li a {
