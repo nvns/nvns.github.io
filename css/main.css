@@ -97,19 +97,30 @@ button.navbar-toggle {
   color: #FF5300;
 }
 
+.carousel-inner img {
+  width: 100%;
+}
+
 /* Class definitions */
 
 .centered {
   text-align: center;
 }
 
+.wide {
+  width: 100%;
+}
+
+.no-frame-left {
+  padding-left: 0px;
+}
+
 /* Snowflakes */
 
-#auction_target a.green {
+#auction_info .green {
   font-weight: bold;
   color: #2c7736;
 }
-
 
 #flyer {
   width: 100%;
