@@ -103,4 +103,19 @@ button.navbar-toggle {
   text-align: center;
 }
 
+.green {
+  color: #2c7736;
+}
+
 /* Snowflakes */
+
+#flyer {
+  width: 100%;
+}
+
+#auction_map {
+  margin-top: 33px;
+  width: 100%;
+  height: 500px;
+  border: 0;
+}
