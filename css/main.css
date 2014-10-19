@@ -98,6 +98,12 @@ button.navbar-toggle {
   color: #FF5300;
 }
 
+.carousel-indicators li, .carousel-indicators li.active {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+}
+
 .carousel-inner img {
   width: 100%;
 }
@@ -114,6 +120,7 @@ button.navbar-toggle {
 
 .no-frame-left {
   padding-left: 0px;
+  padding-right: 0px;
 }
 
 /* Snowflakes */
@@ -129,7 +136,6 @@ button.navbar-toggle {
 
 #auction_map {
   width: 100%;
-  margin-top: 20px;
-  height: 300px;
   border: 0;
+  height: 260px;
 }
