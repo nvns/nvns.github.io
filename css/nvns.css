@@ -139,3 +139,11 @@ button.navbar-toggle {
   border: 0;
   height: 260px;
 }
+
+#camp_target table {
+  margin-left: 20px;
+}
+
+#camp_target table td, #camp_target table th {
+  padding: 1px 5px;
+}
