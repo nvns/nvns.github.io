@@ -17,7 +17,6 @@ body {
         -moz-border-radius-bottomleft: 5px;
         border-bottom-right-radius: 5px;
         border-bottom-left-radius: 5px;
-        padding-bottom: 20px;
         padding-left: 0px;
         padding-right: 0px;
         box-shadow: 0px 1px 20px rgba(0, 0, 0, .5);
@@ -180,7 +179,54 @@ body {
         }
 
         footer {
-            color: #999;
+            padding-top: 200px;
+            /*background: url('/img/bg/trees.png') top left repeat-x;*/
+            background: url('/img/bg/trees_bw.png') top left repeat-x;
+            .footer-content {
+                font-size: .9em;
+                margin: 0px -15px;
+                padding: 20px;
+                /*background-color: #81ab19;*/
+                background-color: #f3f5f8;
+                color: #8898aa;
+                -webkit-border-bottom-right-radius: 5px;
+                -webkit-border-bottom-left-radius: 5px;
+                -moz-border-radius-bottomright: 5px;
+                -moz-border-radius-bottomleft: 5px;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+
+                .nav-footer {
+                    li {
+                        display: inline-block;
+                        vertical-align: top;
+                        margin-right: 20px;
+                        ul {
+                            li {
+                                display: block;
+                                a {
+                                    font-weight: normal;
+                                    font-size: .85em;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .social-links {
+                    a {
+                        font-weight: normal;
+                    }
+                }
+
+                a {
+                    color: #8898aa;
+                    &:hover {
+                        color: #505a65;
+                    }
+                }
+
+            }
         }
 
         &.scrolled {

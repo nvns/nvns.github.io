@@ -15,7 +15,7 @@
             <a href="{{node.url}}">{{node.title}}</a>
             
             {% if subpages_list.size > 0 %}
-                <ul class="dropdown-menu">
+                <ul class="{% if nav_context == 'header' %}dropdown-menu{% endif %}{% if nav_context == 'footer' %}list-unstyled{% endif %}">
                     {% include subpages_list.html %}
                 </ul>
             {% endif %}

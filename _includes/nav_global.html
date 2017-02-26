@@ -21,6 +21,7 @@
             <ul class="nav navbar-nav">
                 {% assign pages_list = site.pages | sort:"nav_order" %}
                 {% assign group = 'nav_main' %}
+                {% assign nav_context = 'header' %}
                 {% include pages_list.html %}
             </ul>
         </div><!-- /.navbar-collapse -->
