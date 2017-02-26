@@ -1,0 +1,484 @@
+html {
+    height: 100%;
+}
+body {
+    background: url('/img/bg/poppies.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5em;
+    height: 100%;
+
+    #main {
+        padding-top: 300px;
+        background-color: #fff;
+        -webkit-border-bottom-right-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        -moz-border-radius-bottomright: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        padding-bottom: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+        box-shadow: 0px 1px 20px rgba(0, 0, 0, .5);
+        margin-bottom: 20px;
+        
+        header {
+            #nav-global {
+                background: none;
+                border: none;
+                margin-bottom: 0px;
+                .nav-container {
+                    height: 115px;
+                    transition-property: background-color;
+                    transition-duration: .4s;
+                    transition-timing-function: ease-out;
+                    transition-delay: 0s;
+
+                    .navbar-header {
+                        .navbar-brand {
+                            img {
+                                width: 80px;
+                            }
+                        }
+                    }
+
+                    #nav-global-list {
+                        margin-top: 30px;
+                        .nav {
+                            margin-left: 40px;
+                            li {
+                                a {
+                                    font-size: 1.2em;
+                                    text-transform: uppercase;
+                                    font-weight: bold;
+                                    color: #fff;
+                                    padding: 10px 0px;
+                                    margin: 0 15px;
+                                    transition-property: color;
+                                    transition-duration: .2s;
+                                    transition-timing-function: ease-out;
+                                    transition-delay: 0s;
+                                    text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+                                    &:hover {
+                                        color: rgba(0, 203, 255, 1);
+                                    }
+                                }
+                                &.active {
+                                    a {
+                                        color: rgba(0, 203, 255, 1);
+                                        border-bottom: none;
+                                        background: none;
+                                    }
+                                    ul {
+                                        li {
+                                            a {
+                                                color: #444;
+                                                text-shadow: none;
+                                                font-size: .9em;
+                                            }
+                                        }
+                                    }
+                                }
+                                ul.dropdown-menu {
+                                    margin: 0px;
+                                    padding: 0px;
+                                    display: none;
+                                    border: none;
+                                    li {
+                                        padding: 0px;
+                                        margin: 0px;
+                                        a {
+                                            font-size: .9em;
+                                            padding: 10px 15px;
+                                            margin: 0px;
+                                            color: #444;
+                                            transition-property: background-color;
+                                            transition-duration: .2s;
+                                            transition-timing-function: ease-out;
+                                            transition-delay: 0s;
+                                            text-shadow: none;
+                                        }
+                                        &:hover {
+                                            a {
+                                                background-color: #eee;
+                                            }
+                                        }
+                                        &:nth-child(1) {
+                                            margin-top: 5px;
+                                        }
+                                        &:nth-last-child(1) {
+                                            margin-bottom: 5px;
+                                        }
+                                    }
+                                }
+                                &:hover {
+                                    ul.dropdown-menu {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            #hero {
+                -webkit-background-size: cover !important;
+                -moz-background-size:  cover !important;
+                -o-background-size: cover !important;
+                background-size: cover !important;
+                background-position: center left !important;
+                width: 100%;
+                height: 300px;
+                margin-top: -320px;
+                position: relative;
+
+                h1 {
+                    position: absolute;
+                    bottom: 30px;
+                    left: 30px;
+                    color: #fff;
+                    z-index: 3;
+                    text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+                }
+
+                #hero-overlay {
+                    background: url('/img/bg/grid.png') top left repeat;
+                    opacity: .2;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    overflow: hidden;
+                    z-index: 2;
+                }
+            }
+        }
+
+        #content {
+            padding: 20px;
+            position: relative;
+            #nav-section {
+                li {
+                    a {
+                        &:hover {
+                            color: #444;
+                        }
+                    }
+                    &.active {
+                        a {
+                            cursor: default;
+                            &:hover {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+            color: #999;
+        }
+
+        &.scrolled {
+            header {
+                #nav-global {
+                    .nav-container {
+                        background-color: #fff;
+                        border-bottom: 1px solid #ddd;
+                        #nav-global-list {
+                            li {
+                                a {
+                                    color: #444;
+                                    text-shadow: none;
+                                }
+                                &.active {
+                                    a {
+                                        cursor: default;
+                                        color: rgba(0, 203, 255, 1);
+                                        background: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+    /* BEGIN PAGE-SPECIFIC */
+    &.home {
+        padding-top: 80px;
+        #main {
+            padding-top: 80px;
+            padding-bottom: 0px;
+            background: none;
+            box-shadow: none;
+            margin-bottom: 0px;
+
+            header {
+                #nav-global {
+                    .nav-container {
+                        height: 80px;
+                        background: none;
+                        border: none;
+                    }
+                }
+            }
+
+            #content {
+                z-index: 100;
+                color: #fff;
+                text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+                a {
+                    color: rgba(0, 203, 255, .75);
+                    &:hover {
+                        color: rgba(0, 203, 255, 1);
+                    }
+                }
+            }
+        }
+    }
+    &.about {
+        #main {
+            header {
+                #hero {
+                    background-position: 0% 35% !important;
+                }
+            }
+        }
+    }
+
+        /* BEGIN ABOUT SECTION SUBPAGES */
+        &.family-responsibilities {
+            #main {
+                header {
+                    #hero {
+                        background-position: 0% 35% !important;
+                    }
+                }
+            }
+        }
+        &.teachers {
+            #main {
+                header {
+                    #hero {
+                        background-position: 0% 25% !important;
+                    }
+                }
+            }
+        }
+        /* END ABOUT SECTION SUBPAGES */
+
+    &.school-day {
+
+    }
+    &.arts {
+        #main {
+            header {
+                #hero {
+                    background-position: 0% 20% !important;
+                }
+            }
+        }
+    }
+    &.admissions {
+        #main {
+            header {
+                #hero {
+                    background-position: 0% 35% !important;
+                }
+            }
+        }
+    }
+    &.summer-camp {
+        #main {
+            header {
+                #hero {
+                    background-position: 0% 35% !important;
+                }
+            }
+        }
+    }
+    &.contact {
+        #main {
+            header {
+                #hero {
+                    background-position: 0% 35% !important;
+                }
+            }
+        }
+    }
+    /* END PAGE-SPECIFIC */
+}
+
+@media(max-width:767px){
+    body {
+        #main {
+            header {
+                #nav-global {
+                    .nav-container {
+                        height: auto !important;
+                        .navbar-header {
+                            .navbar-toggle {
+                                background-color: #eeeeee;
+                            }
+                            .navbar-brand {
+                                padding: 5px;
+                                img {
+                                    width: 40px;
+                                }
+                            }
+                        }
+
+                        #nav-global-list {
+                            margin: 0px;
+                            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f5f5f5+100 */
+                            background: #ffffff; /* Old browsers */
+                            background: -moz-linear-gradient(top,  #ffffff 0%, #f5f5f5 100%); /* FF3.6-15 */
+                            background: -webkit-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%); /* Chrome10-25,Safari5.1-6 */
+                            background: linear-gradient(to bottom,  #ffffff 0%,#f5f5f5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f5f5',GradientType=0 ); /* IE6-9 */
+                            margin-left: -30px;
+                            margin-right: -30px;
+                            .nav {
+                                margin: 0px;
+                                li {
+                                    a {
+                                        padding: 10px 15px;
+                                        margin: 0px;
+                                        color: #444;
+                                        text-shadow: none;
+                                        &:hover,
+                                        &:active {
+                                            color: #444;
+                                            background-color: #eee;
+                                        }
+                                    }
+                                    &.active {
+                                        a {
+                                            &:hover {
+                                                color: rgba(0, 203, 255, 1) !important;
+                                            }
+                                        }
+                                    }
+                                    ul.dropdown-menu {
+                                        display: none !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(min-width:768px){
+    body {
+        
+    }
+}
+@media(min-width:992px){
+    body {
+        
+    }
+}
+@media(min-width:1200px){
+    body {
+        
+    }
+}
+
+/* GENERIC STYLES */
+a {
+    color: rgba(42, 93, 176, 1);
+    transition-property: color;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
+    font-weight: bold;
+    &:hover {
+        color: rgba(0, 203, 255, 1);
+        text-decoration: none;
+    }
+    &:visited {
+        text-decoratio: none;
+    }
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+/* UTIL STYLES */
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
+    &.ready {
+        opacity: 1;
+    }
+}
+
+.fullscreen-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fullscreen-bg-video-overlay {
+    background: url('/img/bg/grid.png') top left repeat;
+    opacity: .4;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -99;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .fullscreen-bg-video {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg-video {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+@media (max-width: 767px) {
+    /*.fullscreen-bg {
+        background: url('../img/videoframe.jpg') center center / cover no-repeat;
+    }*/
+
+    .fullscreen-bg-video {
+        display: none;
+    }
+}
