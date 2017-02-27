@@ -56,7 +56,6 @@ body {
                             li {
                                 a {
                                     font-size: 1.2em;
-                                    text-transform: uppercase;
                                     font-weight: bold;
                                     color: #fff;
                                     padding: 10px 0px;
@@ -401,6 +400,10 @@ body {
                             .nav {
                                 margin: 0px;
                                 li {
+                                    border-top: 1px dotted #ddd;
+                                    &:nth-child(1) {
+                                        border-top: none;
+                                    }
                                     a {
                                         padding: 10px 15px;
                                         margin: 0px;
