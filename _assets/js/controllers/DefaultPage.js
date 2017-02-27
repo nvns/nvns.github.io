@@ -9,10 +9,10 @@ nvns.nvnsApp.controller('DefaultPageCtrl', ['$scope', '$timeout',
 
     $scope.init = function() {
 
-        $scope.getViewportWidth();
+        $scope.setViewportWidth();
 
         $(window).resize(function(){
-            $scope.vars.viewport_width = $scope.getViewportWidth();
+            $scope.setViewportWidth();
         });
 
         $(window).scroll(function(){
@@ -39,8 +39,14 @@ nvns.nvnsApp.controller('DefaultPageCtrl', ['$scope', '$timeout',
         });
     }
 
-    $scope.getViewportWidth = function() {
-        return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    $scope.setViewportWidth = function() {
+        var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        if (width !== 0) {
+            $scope.vars.viewport_width = width;
+        }
+        else {
+            $timeout(scope.getViewportWidth, 100);
+        }
     }
 
     window.scope = $scope;
