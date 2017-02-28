@@ -3,6 +3,30 @@ noevalleynurseryschool.github.io
 
 This website was created by [Chris Yap](https://www.chrisyap.com) (Enso's dad!).  Feel free to get in touch with any issues or questions.
 
+## Full environment dependencies
+
+The following dependencies are required if you want to run the full NVNS website environment on your computer for development and local previewing.
+
+* Linux/Unix or Mac OS
+* Node.js / NPM (Package management for the Gulp CSS and Javascript asset build system)
+* Bower (Front-end asset package management)
+* Ruby / RubyGems (Package management and engine for the Jekyll environment)
+
+## Overview for making site updates
+
+You can make simpler text and page updates without previewing locally and getting the environment running by simply checking out the Github repository, editing files, and pushing back to the repo.  Since the site is hosted on Github page, which has Jekyll built-in, simply pushing the HTML pages back to repo will automatically trigger build and deployment.  Easy.
+
+However, making changes to assets that are built, such as Javascript or CSS changes (the latter of which is pre-processed and written in LESS) requires that at least the asset build system (Gulp) be running.
+
+## Major system components
+
+* Jekyll ([https://jekyllrb.com](https://jekyllrb.com))
+* Liquid templating
+* Gulp ([http://gulpjs.com](http://gulpjs.com/))
+* LESS css ([http://lesscss.org/](http://lesscss.org/))
+* AngularJS ([https://angularjs.org/](https://angularjs.org/))
+* jQuery ([https://jquery.com/](https://jquery.com/))
+
 ## Troubleshooting
 
 ### Gulp
@@ -21,7 +45,7 @@ When this happens, you can look up the process ID and force it to stop using `ki
 
 First, find the process ID with:
 
-`lsof -wni tcp:4000`
+`lsof -wni tcp:4000` or `ps aux | grep jekyll`
 
 Then, kill the process.  For example, if the PID you found from the previous command was `12345`:
 

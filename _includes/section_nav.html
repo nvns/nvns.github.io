@@ -2,11 +2,11 @@
 
     {% assign section_index_id_split = page.group | split:"_" %}
     {% assign section_index_id = section_index_id_split | last %}
-    {% assign section_pages_list = site.pages | where:"id",section_index_id %}
+    {% assign section_pages_list = site.pages | where:"id",section_index_id | sort: "nav_order" %}
 
 {% else %}
 
-    {% assign section_pages_list = site.pages | where:"id",page.id %}
+    {% assign section_pages_list = site.pages | where:"id",page.id | sort: "nav_order" %}
 
 {% endif %}
 
