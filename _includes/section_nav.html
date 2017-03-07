@@ -1,7 +1,6 @@
 {% if page.group != 'nav_main' %}
 
-    {% assign section_index_id_split = page.group | split:"_" %}
-    {% assign section_index_id = section_index_id_split | last %}
+    {% assign section_index_id = page.group | remove: "nav_" | split: "_" | join: "-" %}
     {% assign section_pages_list = site.pages | where:"id",section_index_id | sort: "nav_order" %}
 
 {% else %}

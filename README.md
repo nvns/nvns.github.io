@@ -18,7 +18,7 @@ You can make simpler text and page updates without previewing locally and gettin
 
 However, making changes to assets that are built, such as Javascript or CSS changes (the latter of which is pre-processed and written in LESS) requires that at least the asset build system (Gulp) be running.
 
-## Major system components
+## System components
 
 * Jekyll ([https://jekyllrb.com](https://jekyllrb.com))
 * Liquid templating

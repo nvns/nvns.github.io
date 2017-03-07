@@ -3,7 +3,8 @@
     {% assign section_group = 'nav_' | append: section_group_id %}
 
 {% else %}
-    {% assign section_group = 'nav_' | append: page.id %}
+    {% assign section_group_substring = page.id | split: "-" | join: "_" %}
+    {% assign section_group = 'nav_' | append: section_group_substring %}
 
 {% endif %}
 
