@@ -283,6 +283,7 @@ body {
     /* BEGIN PAGE-SPECIFIC */
     &.home {
         padding-top: 80px;
+        line-height: 18px;
         #main {
             padding-top: 80px;
             padding-bottom: 0px;
@@ -311,6 +312,9 @@ body {
                     }
                 }
             }
+        }
+        h1,h2,h3,h4,h5,h6 {
+            line-height: 1.3em;
         }
     }
     &.about {
@@ -412,6 +416,7 @@ body {
     /* END PAGE-SPECIFIC */
 }
 
+/* BEGIN RESPONSIVE */
 @media(min-width: 0px) and (max-width:1199px){
     body {
         #main {
@@ -763,3 +768,4 @@ h3 {
         display: none;
     }
 }
+/* END RESPONSIVE */
