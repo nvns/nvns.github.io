@@ -53,4 +53,4 @@ Then, kill the process.  For example, if the PID you found from the previous com
 
 ## To-Do
 
-* Devise a way to improve asset pipeline implementation so that we can concatenate and minify Javascript assets using only Jekyll/Github.io-native solutions, enabling us to dispense with Gulp entirely.  Currently concatenate might be possibly through the use of includes, but minify is not.  There are plenty of 3rd party Jekyll plugins that would accomplish this, but Github.io does not support the vast majority of plugins.
+* Devise a way to improve asset pipeline implementation so that we can concatenate and minify Javascript assets using only Jekyll/Github.io-native solutions, enabling us to dispense with Gulp entirely.  Currently concatenate might be possible through the use of includes, but minify is not.  There are plenty of 3rd party Jekyll plugins that would accomplish this, but Github.io does not support the vast majority of plugins.
