@@ -50,3 +50,7 @@ First, find the process ID with:
 Then, kill the process.  For example, if the PID you found from the previous command was `12345`:
 
 `kill -9 12345`
+
+## ToDos
+
+* Convert LESS to SASS CSS pre-processing for better integration with Jekyll on Github and enabling us to fully edit this site without necessarily needing to get the environment running locally.
