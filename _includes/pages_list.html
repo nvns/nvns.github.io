@@ -2,7 +2,8 @@
     {% if group == null or group == node.group %}
         
         {% if node.group == 'nav_main' %}
-            {% assign subgroup = 'nav_' | append: node.id %}
+            {% assign subgroup_substring = node.id | split: "-" | join: "_" %}
+            {% assign subgroup = 'nav_' | append: subgroup_substring %}
         {% else %}
             {% assign subgroup = node.group %}
         {% endif %}
