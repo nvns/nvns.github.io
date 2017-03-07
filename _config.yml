@@ -14,4 +14,4 @@ gems:
     - jekyll-sitemap
 sass:
     style: compressed
-    sass_dir: _assets/sass
+    sass_dir: _assets/scss
