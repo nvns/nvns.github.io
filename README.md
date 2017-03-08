@@ -26,7 +26,7 @@ If you are running Mac OS X, Ruby is probably already installed on your system.
 
 ## Steps to get environment running locally
 
-1. Checkout the git repository
+1. Clone the git repository to your system
 2. Install node.js / NPM
 3. Install bower
 4. In a terminal, `cd` into the directory where you checked out the code
