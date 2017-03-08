@@ -17,7 +17,8 @@ nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout',
                 modestbranding: 1,
                 autohide: 1,
                 origin: window.location.href
-            }
+            },
+            muted: true
         }
     }
 
@@ -37,7 +38,6 @@ nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout',
     }
 
     $scope.initVideoPlayer = function() {
-        console.log('trying');
         if ($scope.vars.video.player) {
             $scope.$on('youtube.player.ready', function(event, player){
                 $scope.vars.video.player.mute();
@@ -48,6 +48,17 @@ nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout',
         }
         else {
             $timeout($scope.initVideoPlayer, 10);
+        }
+    }
+
+    $scope.toggleVideoSound = function() {
+        if ($scope.vars.video.muted) {
+            $scope.vars.video.player.unMute();
+            $scope.vars.video.muted = false;
+        }
+        else {
+            $scope.vars.video.player.mute();
+            $scope.vars.video.muted = true;
         }
     }
 

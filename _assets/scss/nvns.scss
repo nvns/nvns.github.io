@@ -306,15 +306,40 @@ body {
                 color: #fff;
                 text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
                 a {
-                    color: rgba(0, 203, 255, .75);
+                    color: #fff;
+                    display: inline-block;
+                    border-bottom: 1px dotted #fff;
                     &:hover {
                         color: rgba(0, 203, 255, 1);
+                        border-color: rgba(0, 203, 255, 1);
+                    }
+                }
+                #home-video-controls {
+                    margin-top: 40px;
+                    display: none;
+                    &.video-ready {
+                        display: block;
+                    }
+                    li {
+                        margin-left: 30px;
+                        &:nth-child(1) {
+                            margin-left: 0px;
+                        }
+                        a {
+                            border: none !important;
+                        }
+                        .audio-spectrum {
+                            margin-left: 10px;
+                        }
                     }
                 }
             }
         }
         h1,h2,h3,h4,h5,h6 {
             line-height: 1.3em;
+        }
+        p {
+            line-height: 1.5em;
         }
     }
     &.about {
@@ -599,6 +624,32 @@ body {
                 }
             }
         }
+        &.home {
+            font-size: 1em;
+            h1 {
+                font-size: 22px
+            }
+            h2 {
+                font-size: 18px;
+            }
+
+            h3 {
+                font-size: 14px;
+            }
+            h1,h2,h3,h4,h5,h6 {
+                line-height: 1.3em;
+            }
+            p {
+                line-height: 1.5em;
+            }
+            #main {
+                #content {
+                    #home-video-controls {
+                        display: none !important;
+                    }
+                }
+            }
+        }
     }
 }
 @media(min-width:768px){
@@ -745,6 +796,84 @@ h3 {
     z-index: -99;
 }
 
+/* The audio spectrum animation style lifed from https://codepen.io/joannaong/pen/olkzh */
+.audio-spectrum {
+    overflow: hidden;
+    height: 12px;
+    width: 15px;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+
+    .bar {
+        height: 1px;
+        width: 3px;
+        display: inline-block;
+        background-color: #fff;
+        bottom: 0;
+        position: absolute;
+
+        &#bar-1 { 
+            left: 0; 
+            animation-name: audioSpectrumMovement1;
+            animation-delay: 0ms;
+        }
+        &#bar-2 { 
+            left: 6px; 
+            animation-name: audioSpectrumMovement2; 
+            animation-delay: 300ms;
+        }
+        &#bar-3 { 
+            left: 12px;
+            animation-name: audioSpectrumMovement3;
+            animation-delay: 600ms;
+        }
+
+        animation-duration: 500ms;
+        animation-play-state: running;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+
+    &.no-animation {
+        .bar {
+            animation: none;
+            animation-name: none;   
+        }
+        
+    }
+}
+
+@-webkit-keyframes audioSpectrumMovement1 {
+    from { height: 1px; }
+    to { height: 12px; }
+}
+@-webkit-keyframes audioSpectrumMovement2 {
+    from { height: 1px; }
+    to { height: 5px; }
+}
+@-webkit-keyframes audioSpectrumMovement3 {
+    from { height: 1px; }
+    to { height: 15px; }
+}
+@-webkit-keyframes audioSpectrumMovement4 {
+    from { height: 1px; }
+    to { height: 10px; }
+}
+@-webkit-keyframes audioSpectrumMovement5 {
+    from { height: 1px; }
+    to { height: 5px; }
+}
+@-webkit-keyframes audioSpectrumMovement6 {
+    from { height: 1px; }
+    to { height: 5px; }
+}
+
+
+
+
 @media (min-aspect-ratio: 16/9) {
     .fullscreen-bg-video {
         height: 300%;
@@ -760,10 +889,6 @@ h3 {
 }
 
 @media (max-width: 767px) {
-    /*.fullscreen-bg {
-        background: url('../img/videoframe.jpg') center center / cover no-repeat;
-    }*/
-
     .fullscreen-bg-video {
         display: none;
     }

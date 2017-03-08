@@ -28,6 +28,54 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="col-md-12">
+                        <ol 
+                            ng-class="{
+                                'video-ready': vars.video_ready
+                            }" 
+                            id="home-video-controls" 
+                            class="list-unstyled clearfix">
+                            <li class="pull-left">
+                                <div class="clearfix">
+                                    <small>
+                                        <a ng-click="toggleVideoSound()">
+                                            <span 
+                                                ng-class="{
+                                                    'glyphicon-volume-off': vars.video.muted,
+                                                    'glyphicon-volume-up': !vars.video.muted
+                                                }" 
+                                                class="glyphicon pull-left">
+                                            </span>
+                                            <div 
+                                                ng-class="{
+                                                    'no-animation': vars.video.muted
+                                                }" 
+                                                class="audio-spectrum pull-left">
+                                                <div id="bar-1" class="bar"></div>
+                                                <div id="bar-2" class="bar"></div>
+                                                <div id="bar-3" class="bar"></div>
+                                            </div>
+                                            
+                                        </a>
+                                    </small>
+                                    
+                                </div>
+                                
+                            </li>
+                            <li class="pull-left">
+                                <small>
+                                    <a href="https://vimeo.com/199110986" target="_blank">
+                                        <i class="fa fa-vimeo-square"></i> Watch this video on Vimeo <i class="fa fa-external-link"></i>
+                                    </a>
+                                </small>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                
+
             </div>
 
             <div 
@@ -35,15 +83,6 @@
                     'ready': vars.video_ready
                 }" 
                 class="fullscreen-bg">
-                <!--<iframe 
-                    id="home-hero-video" 
-                    class="fullscreen-bg-video" 
-                    width="640" 
-                    height="360" 
-                    src="https://www.youtube.com/embed/X2C8gbqzv2Q?enablejsapi=1&autoplay=1&loop=1&controls=0&showinfo=0&playlist=X2C8gbqzv2Q&modestbranding=1&autohide=1&origin=http://localhost:4000" 
-                    frameborder="0" 
-                    allowfullscreen>
-                </iframe>-->
                 <youtube-video 
                     id="home-hero-video" 
                     class="fullscreen-bg-video" 
