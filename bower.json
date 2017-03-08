@@ -1,12 +1,12 @@
 {
-  "name": "nvns2017",
+  "name": "nvns.github.io",
   "authors": [
     "Chris Yap <buzzyapyear@gmail.com>"
   ],
   "description": "Website for the Noe Valley Nursery School",
   "main": "",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "www.noevalleynurseryschool.com",
   "ignore": [
     "**/.*",
     "node_modules",
