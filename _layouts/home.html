@@ -37,26 +37,22 @@
                             id="home-video-controls" 
                             class="list-unstyled clearfix">
                             <li class="pull-left">
-                                <div class="clearfix">
-                                    <small>
-                                        <a ng-click="toggleVideoSound()">
-                                            <span 
-                                                ng-class="{
-                                                    'glyphicon-volume-off': vars.video.muted,
-                                                    'glyphicon-volume-up': !vars.video.muted
-                                                }" 
-                                                class="glyphicon pull-left">
-                                            </span>
-                                            <div class="audio-spectrum pull-left">
-                                                <div id="bar-1" class="bar"></div>
-                                                <div id="bar-2" class="bar"></div>
-                                                <div id="bar-3" class="bar"></div>
-                                            </div>
-                                            
-                                        </a>
-                                    </small>
+
+                                <a ng-click="toggleVideoSound()">
+                                    <span 
+                                        ng-class="{
+                                            'glyphicon-volume-off': vars.video.muted,
+                                            'glyphicon-volume-up': !vars.video.muted
+                                        }" 
+                                        class="glyphicon pull-left">
+                                    </span>
+                                    <div class="audio-spectrum pull-left">
+                                        <div id="bar-1" class="bar"></div>
+                                        <div id="bar-2" class="bar"></div>
+                                        <div id="bar-3" class="bar"></div>
+                                    </div>
                                     
-                                </div>
+                                </a>
                                 
                             </li>
                             <li class="pull-left">
