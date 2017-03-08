@@ -56,12 +56,12 @@ To edit `javascript` or `css`, look in the `_assets` directory.  All relevant as
 
 #### Compiled files that you should not edit
 
-* The `_site` directory contains the compiled site created by Jekyll.  You _should not_ edit or touch these files as they will be overwritten by Jekyll.
-* Similarly, the `dist` directory is compiled assets that will be copied by Jekyll into the actual site files in `_site`.  Do not edit anything in here as they will be overwritten by the system.
+* The `_site` directory contains the compiled site created by Jekyll.  You **should not** edit or touch these files as they will be overwritten by Jekyll.
+* Similarly, the `dist` directory is compiled assets that will be copied by Jekyll into the actual site files in `_site`.  **Do not edit anything in here** as they will be overwritten by the system.
 
 #### Adding and removing pages
 
-It's advised to take a look at the [Jekyll website](https://jekyllrb.com) to get an idea of how Jekyll works.  The site structure should be fairly self-evident with a quick look at the Git repo.  Of particular note is *required* the block of code at the top of every HTML file that Jekyll refers to as `Front Matter`, such as:
+It's advised to take a look at the [Jekyll website](https://jekyllrb.com) to get an idea of how Jekyll works.  The site structure should be fairly self-evident with a quick look at the Git repo.  Of particular note is **required** the block of code at the top of every HTML file that Jekyll refers to as `Front Matter`, such as:
 
 ```
 ---
