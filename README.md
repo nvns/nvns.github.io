@@ -90,6 +90,7 @@ It's mostly self-explanatory but here's a couple pointers for trickier bits:
 * The `layout` field refers to the base template which is used to render the page with the page you are working on.  For the most part, you'll be using `default`
 * The `group` setting helps Jekyll build the navigation system.  Top level items should use `nav_main`.  Subpages of a top-level item should use `nav_<section name>`, e.g. `nav_about`
 * The `nav_order` field defines the order the items will appear in the navigation relative to each other.
+* In general, follow the existing naming conventions such as using `underscores` and `dashes` when setting these fields.
 
 ## Troubleshooting
 
