@@ -61,7 +61,7 @@ To edit `javascript` or `css`, look in the `_assets` directory.  All relevant as
 
 #### Adding and removing pages
 
-It's advised to take a look at the [Jekyll website](https://jekyllrb.com) to get an idea of how Jekyll works.  The site structure should be fairly self-evident with a quick look at the Git repo.  Of particular note is the block of code at the top of every HTML file that Jekyll refers to as `Front Matter`, such as:
+It's advised to take a look at the [Jekyll website](https://jekyllrb.com) to get an idea of how Jekyll works.  The site structure should be fairly self-evident with a quick look at the Git repo.  Of particular note is *required* the block of code at the top of every HTML file that Jekyll refers to as `Front Matter`, such as:
 
 ```
 ---
