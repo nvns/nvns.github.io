@@ -56,7 +56,7 @@ To edit `javascript` or `css`, look in the `_assets` directory.  All relevant as
 
 #### Compiled files that you should not edit
 
-* The `_site` directory contains the compiled site created by Jekyll.  You **should not** edit or touch these files as they will be overwritten by Jekyll.
+* The `_site` directory contains the compiled site created by Jekyll.  **You should not edit or touch these files** as they will be overwritten by Jekyll.
 * Similarly, the `dist` directory is compiled assets that will be copied by Jekyll into the actual site files in `_site`.  **Do not edit anything in here** as they will be overwritten by the system.
 
 #### Adding and removing pages
