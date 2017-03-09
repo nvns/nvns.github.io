@@ -694,6 +694,17 @@ body {
                 }
             }
         }
+        &.teachers {
+            #main {
+                #content {
+                    .teacher-bios {
+                        .teacher-bio {
+                            min-height: initial;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 @media(min-width:992px){
@@ -712,17 +723,27 @@ body {
     body {
         #main {
             footer {
-
-            .footer-content {
-
-                .nav-footer {
-                    li {
-                        margin-right: 10px;
+                .footer-content {
+                    .nav-footer {
+                        li {
+                            margin-right: 10px;
+                        }
                     }
-                }
 
+                }
             }
         }
+        &.teachers {
+            #main {
+                #content {
+                    .teacher-bios {
+                        .teacher-bio {
+                            min-height: 680px;
+                        }
+                    }
+                }
+            }
+            
         }
     }
 }
