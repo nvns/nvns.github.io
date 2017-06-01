@@ -40,7 +40,7 @@ If you are running Mac OS X, Ruby is probably already installed on your system.
 
 You can make simpler text and page updates without previewing locally and getting the environment running by simply checking out the Github repository, editing files, and pushing back to the repo.  Since the site is hosted on Github page, which has Jekyll built-in, simply pushing the HTML pages back to repo will automatically trigger build and deployment.  Easy.
 
-However, making changes to assets that are built, such as Javascript or CSS changes (the latter of which is pre-processed and written in LESS) requires that at least the asset build system (Gulp) be running.
+However, making changes to assets that are built, such as Javascript changes, requires that at least the asset build system (Gulp) be running.
 
 ### Details
 
