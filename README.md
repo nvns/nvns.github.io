@@ -9,7 +9,8 @@ The following dependencies are required if you want to run the full NVNS website
 
 * Linux/Unix or Mac OS
 * Ruby (Language underlying Jekyll and RubyGems) - [https://www.ruby-lang.org/en/documentation/installation/](https://www.ruby-lang.org/en/documentation/installation/)
-* RubyGems (Package management the Jekyll environment - [https://rubygems.org/pages/download](https://rubygems.org/pages/download))
+* RubyGems (Package management for the Jekyll environment - [https://rubygems.org/pages/download](https://rubygems.org/pages/download))
+* Bundler (Helper that makes managing RubyGems on a project level much easier)[https://bundler.io/](https://bundler.io/)
 * Node.js / NPM (Package management, used in this case for Gulp - [https://docs.npmjs.com/getting-started/installing-node](https://docs.npmjs.com/getting-started/installing-node))
 * Bower (Front-end asset package management - [https://bower.io/#install-bower](https://bower.io/#install-bower))
 
@@ -27,10 +28,10 @@ If you are running Mac OS X, Ruby is probably already installed on your system.
 ## Steps to get environment running locally
 
 1. Clone the git repository to your system
-2. Install node.js / NPM
-3. Install bower
-4. In a terminal, `cd` into the directory where you checked out the code
-5. Run `npm install` (Note, depending on your situation, you may need to run this as `sudo`, e.g. `sudo npm install`)
+2. Ensure you have all the dependencies noted above.
+3. In a terminal, `cd` into the directory where you checked out the code
+4. Run `npm install` (Note, depending on your situation, you may need to run this as `sudo`, e.g. `sudo npm install`)
+5. Run `bundle install` (Note, depending on your situation, you may need to run this as `sudo`, e.g. `sudo bundle install`)
 6. Run `gulp`.
 7. Point your browser to `http://localhost:4000`
 
@@ -73,7 +74,7 @@ nav_order: 1
 ---
 ```
 
-and 
+and
 
 ```
 ---
