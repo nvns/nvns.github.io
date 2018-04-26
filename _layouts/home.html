@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="nvnsApp">
-    
+
     {% include head.html %}
 
     <body ng-controller="HomeCtrl" ng-init="init()" class="home">
@@ -8,8 +8,8 @@
         <div
             ng-class="{
                 'scrolled': vars.scrolled
-            }"  
-            id="main" 
+            }"
+            id="main"
             class="container">
 
             <header>
@@ -17,7 +17,7 @@
                 {% include nav_global.html %}
 
             </header>
-            
+
             <div id="content">
 
                 <div class="row">
@@ -30,20 +30,20 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <ol 
+                        <ol
                             ng-class="{
                                 'video-ready': vars.video_ready
-                            }" 
-                            id="home-video-controls" 
+                            }"
+                            id="home-video-controls"
                             class="list-unstyled clearfix">
                             <li class="pull-left">
 
                                 <a ng-click="toggleVideoSound()">
-                                    <span 
+                                    <span
                                         ng-class="{
                                             'glyphicon-volume-off': vars.video.muted,
                                             'glyphicon-volume-up': !vars.video.muted
-                                        }" 
+                                        }"
                                         class="glyphicon pull-left">
                                     </span>
                                     <div class="audio-spectrum pull-left">
@@ -51,13 +51,13 @@
                                         <div id="bar-2" class="bar"></div>
                                         <div id="bar-3" class="bar"></div>
                                     </div>
-                                    
+
                                 </a>
-                                
+
                             </li>
                             <li class="pull-left">
                                 <small>
-                                    <a href="https://vimeo.com/199110986" target="_blank">
+                                    <a href="https://vimeo.com/199110986" class="no-border" target="_blank">
                                         <i class="fa fa-vimeo-square"></i> Watch this video on Vimeo <i class="fa fa-external-link"></i>
                                     </a>
                                 </small>
@@ -66,29 +66,29 @@
                     </div>
                 </div>
 
-                
+
 
             </div>
 
-            <div 
+            <div
                 ng-class="{
                     'ready': vars.video_ready
-                }" 
+                }"
                 class="fullscreen-bg">
-                <youtube-video 
-                    id="home-hero-video" 
-                    class="fullscreen-bg-video" 
-                    data-player="vars.video.player" 
-                    data-video-id="vars.video.id" 
+                <youtube-video
+                    id="home-hero-video"
+                    class="fullscreen-bg-video"
+                    data-player="vars.video.player"
+                    data-video-id="vars.video.id"
                     data-player-vars="vars.video.params">
                 </youtube-video>
             </div>
             <div id="home-hero-video-screen" class="fullscreen-bg-video-overlay"></div>
 
         </div>
-        
+
         {% include javascript.html %}
-    
+
     </body>
 
 </html>

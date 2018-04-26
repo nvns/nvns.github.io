@@ -21,7 +21,7 @@ body {
         padding-right: 0px;
         box-shadow: 0px 1px 20px rgba(0, 0, 0, .5);
         margin-bottom: 20px;
-        
+
         header {
             #nav-global {
                 background: none;
@@ -274,7 +274,7 @@ body {
                     }
                 }
             }
-            
+
         }
     }
 
@@ -311,6 +311,9 @@ body {
                         color: rgba(0, 203, 255, 1);
                         border-color: rgba(0, 203, 255, 1);
                     }
+                    &.no-border {
+                        border: none;
+                    }
                 }
                 #home-video-controls {
                     margin-top: 40px;
@@ -323,9 +326,6 @@ body {
                         margin-left: 30px;
                         &:nth-child(1) {
                             margin-left: 0px;
-                        }
-                        a {
-                            border: none !important;
                         }
                         .audio-spectrum {
                             margin-left: 10px;
@@ -580,11 +580,11 @@ body {
                             }
                         }
                     }
-                }   
+                }
             }
         }
 
-        
+
     }
 }
 @media(max-width:767px){
@@ -658,10 +658,10 @@ body {
                 #hero {
                     height: 230px;
                 }
-            } 
+            }
         }
-        
-        
+
+
     }
 }
 @media(max-width:991px){
@@ -722,7 +722,7 @@ body {
                 }
             }
         }
-        
+
     }
 }
 @media(min-width:992px) and (max-width:1199px){
@@ -749,13 +749,13 @@ body {
                     }
                 }
             }
-            
+
         }
     }
 }
 @media(min-width:1200px){
     body {
-        
+
     }
 }
 
@@ -773,7 +773,7 @@ a {
         text-decoration: none;
     }
     &:visited {
-        text-decoratio: none;
+        text-decoration: none;
     }
 }
 
@@ -841,17 +841,17 @@ h3 {
         bottom: 0;
         position: absolute;
 
-        &#bar-1 { 
-            left: 0; 
+        &#bar-1 {
+            left: 0;
             animation-name: audioSpectrumMovement1;
             animation-delay: 0ms;
         }
-        &#bar-2 { 
-            left: 6px; 
-            animation-name: audioSpectrumMovement2; 
+        &#bar-2 {
+            left: 6px;
+            animation-name: audioSpectrumMovement2;
             animation-delay: 300ms;
         }
-        &#bar-3 { 
+        &#bar-3 {
             left: 12px;
             animation-name: audioSpectrumMovement3;
             animation-delay: 600ms;
@@ -868,9 +868,9 @@ h3 {
     &.no-animation {
         .bar {
             animation: none;
-            animation-name: none;   
+            animation-name: none;
         }
-        
+
     }
 }
 
