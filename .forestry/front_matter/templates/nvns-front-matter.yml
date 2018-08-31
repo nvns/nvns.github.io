@@ -62,5 +62,3 @@ fields:
     step: '1'
     required: true
   default: '1'
-pages:
-- about/test.md
