@@ -1,0 +1,64 @@
+---
+label: NVNS Front Matter
+hide_body: false
+is_partial: false
+fields:
+- type: select
+  config:
+    source:
+      type: simple
+    options:
+    - default
+    - home
+    required: true
+  label: Layout
+  name: layout
+  description: This determines which base template this page should extend.  All pages,
+    except the home page, should use the "default" template.
+  hidden: false
+  default: default
+- type: text
+  name: title
+  label: Page Title
+  description: The page title.  This will appear in the banner, and also the browser's
+    page title and Google search results.
+  config:
+    required: true
+- type: text
+  label: Page ID
+  name: id
+  description: This is a label that will be used to identify your page to the navigation
+    system.  It should contain no spaces.  For example, the Family Responsibilties
+    page could have an ID value of "family-responsibilties".
+  config:
+    required: true
+- type: select
+  config:
+    source:
+      type: simple
+    required: true
+    options:
+    - nav_about
+    - nav_school_day
+    - nav_admissions
+    - nav_summer_camp
+    - nav_contact
+  label: Navigation Group ID
+  name: group
+  description: This tells the navigation system where to place the link to your page.  For
+    pages at the top level, (e.g. "About the School") select "nav_main".  If the page
+    is a sub-page of a section, use the appropriate ID based on the section name (e.g.
+    for the "Our Teachers" page, which lives in the "About the School" section, use
+    the "nav_about" ID).
+  default: nav_about
+- type: number
+  name: nav_order
+  label: Navigation Order
+  description: This is the numerical order of the page for its section.  It will determine
+    the order in which the page links are displayed in the navigation.
+  config:
+    min: '1'
+    max: '10'
+    step: '1'
+    required: true
+  default: '1'
