@@ -17,6 +17,7 @@ nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout', '$sce',
                 enablejsapi: 1,
                 modestbranding: 1,
                 autohide: 1,
+                mute: 1,
                 origin: window.location.href
             },
             muted: true
