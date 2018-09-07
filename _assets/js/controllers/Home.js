@@ -6,7 +6,7 @@ nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout',
         scrolled: false,
         video_ready: false,
         video: {
-            id: 'X2C8gbqzv2Q', 
+            id: 'X2C8gbqzv2Q',
             player: null,
             params: {
                 autoplay: 1,
@@ -16,6 +16,7 @@ nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout',
                 playlist: 'X2C8gbqzv2Q',
                 modestbranding: 1,
                 autohide: 1,
+                mute: 1,
                 origin: window.location.href
             },
             muted: true
@@ -23,7 +24,7 @@ nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout',
     }
 
     $scope.init = function() {
-        
+
         $(window).scroll(function(){
             var scroll = $(window).scrollTop();
             $timeout(function(){
@@ -39,9 +40,9 @@ nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout',
 
     $scope.initVideoPlayer = function() {
         if ($scope.vars.video.player) {
-            $scope.$on('youtube.player.ready', function(event, player){
+            /*$scope.$on('youtube.player.ready', function(event, player){
                 $scope.vars.video.player.mute();
-            });
+            });*/
             $scope.$on('youtube.player.playing', function(event, player){
                 $scope.vars.video_ready = true;
             });
