@@ -804,7 +804,8 @@ h3 {
     }
 }
 
-.fullscreen-bg-video {
+.fullscreen-bg-video,
+.fullscreen-bg iframe {
     position: absolute;
     top: 0;
     left: 0;

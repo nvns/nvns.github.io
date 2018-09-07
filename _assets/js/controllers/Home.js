@@ -1,12 +1,12 @@
 
-nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout',
-                                     function($scope, $timeout){
+nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout', '$http',
+                                     function($scope, $timeout, $http){
 
     $scope.vars = {
         scrolled: false,
         video_ready: false,
-        video: {
-            id: 'X2C8gbqzv2Q', 
+        /*video: {
+            id: 'X2C8gbqzv2Q',
             player: null,
             params: {
                 autoplay: 1,
@@ -19,11 +19,20 @@ nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout',
                 origin: window.location.href
             },
             muted: true
+        }*/
+        video: null,
+        video_options: {
+            id: '199110986',
+            loop: true,
+            title: false,
+            portrait: false,
+            muted: true,
+            autoplay: true
         }
     }
 
     $scope.init = function() {
-        
+
         $(window).scroll(function(){
             var scroll = $(window).scrollTop();
             $timeout(function(){
@@ -38,7 +47,27 @@ nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout',
     }
 
     $scope.initVideoPlayer = function() {
-        if ($scope.vars.video.player) {
+
+        $scope.vars.video = new Vimeo.Player('video-container', $scope.vars.video_options);
+
+        $scope.vars.video.on('loaded', function (data) {
+            $scope.vars.video.play();
+
+        })
+
+        $scope.vars.video.ready().then(function() {
+            $scope.vars.video.getPaused().then(function(paused) {
+                if (paused) {
+                    $scope.vars.video.play();
+                }
+            });
+        });
+
+
+
+        $scope.vars.video_ready = true;
+
+        /*if ($scope.vars.video.player) {
             $scope.$on('youtube.player.ready', function(event, player){
                 $scope.vars.video.player.mute();
             });
@@ -48,7 +77,7 @@ nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout',
         }
         else {
             $timeout($scope.initVideoPlayer, 10);
-        }
+        }*/
     }
 
     $scope.toggleVideoSound = function() {
