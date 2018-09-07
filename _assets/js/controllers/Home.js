@@ -1,12 +1,12 @@
 
-nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout',
-                                     function($scope, $timeout){
+nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout', '$sce',
+                                     function($scope, $timeout, $sce){
 
     $scope.vars = {
         scrolled: false,
         video_ready: false,
         video: {
-            id: 'X2C8gbqzv2Q', 
+            id: 'X2C8gbqzv2Q',
             player: null,
             params: {
                 autoplay: 1,
@@ -14,16 +14,18 @@ nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout',
                 controls: 0,
                 showinfo: 0,
                 playlist: 'X2C8gbqzv2Q',
+                enablejsapi: 1,
                 modestbranding: 1,
                 autohide: 1,
                 origin: window.location.href
             },
             muted: true
-        }
+        },
+        yt_url: null
     }
 
     $scope.init = function() {
-        
+
         $(window).scroll(function(){
             var scroll = $(window).scrollTop();
             $timeout(function(){
@@ -38,6 +40,22 @@ nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout',
     }
 
     $scope.initVideoPlayer = function() {
+
+        var url = 'https://www.youtube.com/embed/' +
+                  $scope.vars.video.id + '?',
+            params = [];
+
+        $.each($scope.vars.video.params, function (key, val) {
+            params.push(key + '=' + val);
+        });
+
+        url += params.join('&');
+
+        $scope.vars.yt_url = $sce.trustAsResourceUrl(url);
+
+        $scope.vars.video_ready = true;
+
+        /*
         if ($scope.vars.video.player) {
             $scope.$on('youtube.player.ready', function(event, player){
                 $scope.vars.video.player.mute();
@@ -49,6 +67,7 @@ nvns.nvnsApp.controller('HomeCtrl', ['$scope', '$timeout',
         else {
             $timeout($scope.initVideoPlayer, 10);
         }
+        */
     }
 
     $scope.toggleVideoSound = function() {

@@ -75,13 +75,22 @@
                     'ready': vars.video_ready
                 }"
                 class="fullscreen-bg">
-                <youtube-video
+                <!--<youtube-video
                     id="home-hero-video"
                     class="fullscreen-bg-video"
                     data-player="vars.video.player"
                     data-video-id="vars.video.id"
                     data-player-vars="vars.video.params">
-                </youtube-video>
+                </youtube-video>-->
+                <iframe
+                    id="home-hero-video"
+                    class="fullscreen-bg-video"
+                    type="text/html"
+                    width="640"
+                    height="360"
+                    ng-src="{$ vars.yt_url $}"
+                    frameborder="0">
+                </iframe>
             </div>
             <div id="home-hero-video-screen" class="fullscreen-bg-video-overlay"></div>
 
