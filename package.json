@@ -5,15 +5,21 @@
   "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "git@buzz.github.com:buzzyapyear/nvns2017.git"
+    "url": "git@buzz.github.com:buzzyapyear/nvns.github.io.git"
   },
   "author": "Christopher Yap",
   "license": "MIT",
+  "dependencies": {
+    "angular": "~1.6.2",
+    "angular-youtube-embed": "~1.3.1",
+    "bootstrap": "~3.3.7",
+    "font-awesome": "~4.7.0"
+  },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-sourcemaps": "^2.4.1",
-    "gulp-uglify": "^2.0.1",
-    "gulp-util": "^3.0.8"
+    "gulp": "~3.9.1",
+    "gulp-concat": "~2.6.1",
+    "gulp-sourcemaps": "~2.4.1",
+    "gulp-uglify": "~2.0.1",
+    "gulp-util": "~3.0.8"
   }
 }
