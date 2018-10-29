@@ -196,7 +196,7 @@
                     type: 'restaurant_row',
                     items: [
                         {
-                            title: 'GIFT CERTIFCATES TO SOME OF SF\'S MOST POPULAR SF RESTAURANTS',
+                            title: 'GIFT CERTIFCATES TO SOME OF SF\'S MOST POPULAR RESTAURANTS',
                         }
                     ]
                 }
