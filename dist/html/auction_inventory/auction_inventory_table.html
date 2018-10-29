@@ -1,0 +1,42 @@
+<div
+    ng-repeat="category in vars.inventory"
+    class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title"><strong>{{ category.title }}</strong></h4>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th ng-if="category.type === 'auction'">Value</th>
+                <th ng-if="category.type === 'auction'">Starting Bid</th>
+                <th ng-if="category.type === 'raffle'">Ticket price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in category.items">
+                <td>{{ item.title }}</td>
+                <td ng-if="category.type === 'auction'">
+                    <span ng-if="item.value !== null">
+                        ${{ item.value }}
+                    </span>
+                    <span ng-if="item.value === null">
+                        n/a
+                    </span>
+                </td>
+                <td ng-if="category.type === 'auction'">
+                    <span ng-if="item.starting_bid !== null">
+                        ${{ item.starting_bid }}
+                    </span>
+                    <span ng-if="item.starting_bid === null">
+                        n/a
+                    </span>
+                </td>
+                <td ng-if="category.type === 'raffle'">
+                    ${{ item.price }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

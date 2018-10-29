@@ -23,6 +23,7 @@ const vendorFontFiles = [
     'node_modules/bootstrap/dist/fonts/*',
     'node_modules/font-awesome/fonts/*'
 ];
+const htmlFiles = '_assets/html/**/*';
 
 gulp.task('js', () => {
     return gulp.src(jsFiles)
@@ -41,6 +42,11 @@ gulp.task('vendorJs', () => {
         .pipe(gulp.dest('dist/js'))
 });
 
+gulp.task('copyHtmlFiles', () => {
+    return gulp.src(htmlFiles)
+        .pipe(gulp.dest('dist/html'));
+});
+
 gulp.task('vendorCss', () => {
     return gulp.src(vendorCssFiles)
         .pipe(sourcemaps.init())
@@ -56,6 +62,7 @@ gulp.task('copyVendorFonts', () => {
 
 gulp.task('watch', () => {
     gulp.watch(jsFiles, ['js']);
+    gulp.watch(htmlFiles, ['copyHtmlFiles']);
     gulp.watch(vendorJsFiles, ['vendorJs']);
     gulp.watch(vendorCssFiles, ['vendorCss']);
     gulp.watch(vendorFontFiles, ['copyVendorFonts']);
@@ -83,6 +90,7 @@ gulp.task('jekyll', () => {
 
 gulp.task('default', [
     'js',
+    'copyHtmlFiles',
     'vendorJs',
     'vendorCss',
     'copyVendorFonts',
