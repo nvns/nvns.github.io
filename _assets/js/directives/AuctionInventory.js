@@ -174,6 +174,16 @@
                           title: 'TERRA MIA POTTERY PAINTING VIP STUDIO PASS',
                           value: 60,
                           starting_bid: 45
+                        },
+                        {
+                          title: 'BAY SAIL FOR 2 - ADVENTURE CAT SAILING CHARTERS',
+                          value: 90,
+                          starting_bid: 50
+                        },
+                        {
+                          title: 'BETABRAND SHOPPING EXPERIENCE',
+                          value: 300,
+                          starting_bid: 100
                         }
                     ]
                 },
