@@ -136,6 +136,11 @@
                           starting_bid: 150
                         },
                         {
+                          title: 'BETABRAND SHOPPING EXPERIENCE',
+                          value: 300,
+                          starting_bid: 100
+                        },
+                        {
                           title: 'ONE-NIGHT STAY FOR TWO AT SORENSON\'S RESORT IN HOPE VALLEY',
                           value: 275,
                           starting_bid: 150
@@ -166,6 +171,11 @@
                           starting_bid: 55
                         },
                         {
+                          title: 'BAY SAIL FOR 2 - ADVENTURE CAT SAILING CHARTERS',
+                          value: 90,
+                          starting_bid: 50
+                        },
+                        {
                           title: 'PRESIDIO BOWL - ONE HOUR OF UNLIMITED BOWLING ON ONE LANE',
                           value: 89,
                           starting_bid: 45
@@ -174,16 +184,6 @@
                           title: 'TERRA MIA POTTERY PAINTING VIP STUDIO PASS',
                           value: 60,
                           starting_bid: 45
-                        },
-                        {
-                          title: 'BAY SAIL FOR 2 - ADVENTURE CAT SAILING CHARTERS',
-                          value: 90,
-                          starting_bid: 50
-                        },
-                        {
-                          title: 'BETABRAND SHOPPING EXPERIENCE',
-                          value: 300,
-                          starting_bid: 100
                         }
                     ]
                 },
