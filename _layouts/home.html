@@ -41,8 +41,8 @@
                                 <a ng-click="toggleVideoSound()">
                                     <span
                                         ng-class="{
-                                            'glyphicon-volume-off': vars.video.muted,
-                                            'glyphicon-volume-up': !vars.video.muted
+                                            'glyphicon-volume-off': vars.video_muted,
+                                            'glyphicon-volume-up': !vars.video_muted
                                         }"
                                         class="glyphicon pull-left">
                                     </span>
@@ -75,13 +75,17 @@
                     'ready': vars.video_ready
                 }"
                 class="fullscreen-bg">
-                <youtube-video
+                <div
+                    id="home-hero-video"
+                    class="fullscreen-bg-video">
+                </div>
+                <!--<youtube-video
                     id="home-hero-video"
                     class="fullscreen-bg-video"
                     data-player="vars.video.player"
                     data-video-id="vars.video.id"
                     data-player-vars="vars.video.params">
-                </youtube-video>
+                </youtube-video>-->
             </div>
             <div id="home-hero-video-screen" class="fullscreen-bg-video-overlay"></div>
 
