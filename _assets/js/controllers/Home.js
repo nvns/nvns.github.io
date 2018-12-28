@@ -3,22 +3,42 @@ nvns.nvnsApp.controller('HomeCtrl', HomeCtrl);
 HomeCtrl.$inject = [
     '$scope',
     '$timeout',
-    '$window'
+    '$window',
+    '$sce'
 ];
 
-function HomeCtrl ($scope, $timeout, $window) {
+function HomeCtrl ($scope, $timeout, $window, $sce) {
+
+    var sc = $scope.constants = {
+        selected_bg_video_index: Math.round(Math.random()),
+        bg_videos: [
+            {
+                author: 'Richard Levien',
+                youtube_id: 'X2C8gbqzv2Q',
+                external_url: 'https://vimeo.com/199110986',
+                has_audio: true
+            },
+            {
+                author: 'Ian Momsen',
+                youtube_id: 'MDaoEwK5P7k',
+                external_url: null,
+                has_audio: false
+            }
+        ]
+    }
 
     var sv  = $scope.vars = {
         scrolled: false,
+        show_audio_controls: false,
         video_ready: false,
         player: null,
         video_muted: true,
         video_object: {
-            videoId: 'X2C8gbqzv2Q',
+            videoId: sc.bg_videos[sc.selected_bg_video_index].youtube_id,
             playerVars: {
                 autoplay: 1,
                 loop: 1,
-                playlist: 'X2C8gbqzv2Q',
+                playlist: sc.bg_videos[sc.selected_bg_video_index].youtube_id,
                 controls: 0,
                 showinfo: 0,
                 modestbranding: 1,
@@ -150,6 +170,27 @@ function HomeCtrl ($scope, $timeout, $window) {
     }
 
     /**
+     * @name $scope.videoService
+     * @function
+     * @memberOf HomeCtrl
+     * @description Parses the url to determine the video service name
+     * @returns {string} - The video service name
+     * @param {string} url - The external video url
+     */
+    $scope.videoService = function(url) {
+        if (!url) {
+            return 'unknown';
+        }
+        if (url.indexOf('vimeo.com') > -1) {
+            return 'vimeo';
+        } else if (url.indexOf('youtube.com') > -1) {
+            return 'youtube';
+        } else {
+            return 'unknown';
+        }
+    }
+
+    /**
      * @name $scope.toggleVideoSound
      * @function
      * @memberOf HomeCtrl
@@ -165,6 +206,18 @@ function HomeCtrl ($scope, $timeout, $window) {
             sv.player.mute();
             sv.video_muted = true;
         }
+    }
+
+    /**
+     * @name $scope.trustUrl
+     * @function
+     * @memberOf HomeCtrl
+     * @description Instructs angular to trust a url
+     * @returns {$sce}
+     * @param {string} url - The url
+     */
+    $scope.trustUrl = function(url) {
+        return $sce.trustAsUrl(url);
     }
 
     window.scope = $scope;

@@ -1,0 +1,50 @@
+<ol
+    ng-class="{
+        'video-ready': vars.video_ready
+    }"
+    ng-init="video = constants.bg_videos[constants.selected_bg_video_index]"
+    id="home-video-controls"
+    class="list-unstyled clearfix">
+    <li
+        ng-if="video.has_audio"
+        class="pull-left">
+
+        <a ng-click="toggleVideoSound()">
+            <span
+                ng-class="{
+                    'glyphicon-volume-off': vars.video_muted,
+                    'glyphicon-volume-up': !vars.video_muted
+                }"
+                class="glyphicon pull-left">
+            </span>
+            <div class="audio-spectrum pull-left">
+                <div id="bar-1" class="bar"></div>
+                <div id="bar-2" class="bar"></div>
+                <div id="bar-3" class="bar"></div>
+            </div>
+
+        </a>
+
+    </li>
+    <li
+        ng-if="video.external_url"
+        class="pull-left">
+        <small>
+            <a
+                ng-href="{{ trustUrl(video.external_url) }}"
+                class="no-border"
+                target="_blank">
+                <span ng-if="videoService(video.external_url) === 'vimeo'">
+                    <i class="fa fa-vimeo-square"></i> Watch the full video on Vimeo
+                </span>
+                <span ng-if="videoService(video.external_url) === 'youtube'">
+                    <i class="fa fa-youtube-play"></i> Watch the full video on YouTube
+                </span>
+                <span ng-if="videoService(video.external_url) === 'unknown'">
+                    <i class="fa fa-video-camera"></i> Watch the full video
+                </span>
+                &nbsp;<i class="fa fa-external-link"></i>
+            </a>
+        </small>
+    </li>
+</ol>
