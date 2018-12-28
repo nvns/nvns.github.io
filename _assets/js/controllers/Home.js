@@ -52,8 +52,6 @@ function HomeCtrl ($scope, $timeout, $window) {
 
         initYouTubeApi();
 
-        //initVideoPlayer();
-
     }
 
     /**
