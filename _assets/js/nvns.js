@@ -3,4 +3,4 @@
 var nvns = {};
 
 // declare main angular module
-nvns.nvnsApp = angular.module('nvnsApp', ['youtube-embed']);
+nvns.nvnsApp = angular.module('nvnsApp', []);

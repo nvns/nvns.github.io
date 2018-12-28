@@ -3,29 +3,32 @@ nvns.nvnsApp.controller('HomeCtrl', HomeCtrl);
 HomeCtrl.$inject = [
     '$scope',
     '$timeout',
-    '$interval'
+    '$window'
 ];
 
-function HomeCtrl ($scope, $timeout, $interval) {
+function HomeCtrl ($scope, $timeout, $window) {
 
     var sv  = $scope.vars = {
         scrolled: false,
         video_ready: false,
-        video: {
-            id: 'X2C8gbqzv2Q',
-            player: null,
-            params: {
+        player: null,
+        video_muted: true,
+        video_object: {
+            videoId: 'X2C8gbqzv2Q',
+            playerVars: {
                 autoplay: 1,
                 loop: 1,
+                playlist: 'X2C8gbqzv2Q',
                 controls: 0,
                 showinfo: 0,
-                playlist: 'X2C8gbqzv2Q',
                 modestbranding: 1,
                 autohide: 1,
-                mute: 1,
                 origin: window.location.href
             },
-            muted: true
+            events: {
+              onReady: onPlayerReady,
+              onStateChange: onPlayerStateChange
+            }
         },
         video_check_interval: null
     }
@@ -47,31 +50,73 @@ function HomeCtrl ($scope, $timeout, $interval) {
             });
         });
 
-        initVideoPlayer();
+        initYouTubeApi();
 
     }
 
     /**
-     * @name initVideoPlayer
+     * @name initYouTubeApi
      * @function
      * @memberOf HomeCtrl
-     * @description This method starts the youtube video player for our
-     *              video backdrop.
+     * @description Initializes the YouTube API
      */
-    function initVideoPlayer() {
-        if (sv.video.player) {
-            $scope.$on('youtube.player.playing', function(event, player){
-                sv.video_ready = true;
-            });
-            $timeout(function() {
-                if (!sv.video_check_interval) {
-                    sv.video_check_interval = $interval(ensureVideoIsPlaying, 10000);
-                }
-            }, 10000);
+    function initYouTubeApi() {
+        $window.onYouTubeIframeAPIReady = initPlayer;
 
-        }
-        else {
-            $timeout(initVideoPlayer, 10);
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    }
+
+    /**
+     * @name initPlayer
+     * @function
+     * @memberOf HomeCtrl
+     * @description Callback for youtube api ready
+     */
+    function initPlayer() {
+        sv.player = new YT.Player('home-hero-video', sv.video_object);
+    }
+
+    /**
+     * @name onPlayerReady
+     * @function
+     * @memberOf HomeCtrl
+     * @description Callback for youtube player ready
+     * @param {object} e - The event object
+     */
+    function onPlayerReady(e) {
+        sv.player.mute();
+    }
+
+    /**
+     * @name onPlayerStateChange
+     * @function
+     * @memberOf HomeCtrl
+     * @description Callback for youtube player state change
+     * @param {object} e - The event object
+     */
+    function onPlayerStateChange(e) {
+        var player_state = parseInt(e.data);
+
+        if (!isNaN(player_state)) {
+            if ([-1, 0, 2, 5].indexOf(player_state) > -1) {
+                // status codes represent:
+                // -1 – unstarted
+                // 0 – ended
+                // 1 – playing
+                // 2 – paused
+                // 3 – buffering
+                // 5 – video cued
+                ensureVideoIsPlaying();
+            } else {
+                videoIsReady();
+            }
         }
     }
 
@@ -79,30 +124,29 @@ function HomeCtrl ($scope, $timeout, $interval) {
      * @name ensureVideoIsPlaying
      * @function
      * @memberOf HomeCtrl
-     * @description Check video status, if it's stopped, make sure it starts again
+     * @description Ensures the video is playing
      */
     function ensureVideoIsPlaying() {
-        /*
-         * Sometimes the youtube player stops or enters an unexpected state
-         * for reasons unknown, possibly having to do with the machine having
-         * been put to sleep or the browser tab throttled for some reason.
-         * This regular check every ten seconds attempts to ensure the video
-         * resumes playing if this happens.  ~cyap
-         */
-        if (sv.video.player) {
-            var player_status = sv.video.player.getPlayerState();
-            if (!isNaN(player_status)) {
-                if ([-1, 0, 2, 5].indexOf(player_status)) {
-                    // status codes represent:
-                    // -1 unstarted
-                    // 0 stopped
-                    // 2 paused
-                    // 5 video cued
-                    sv.video.player.mute();
-                    sv.video.player.playVideo();
-                }
-            }
+        var state = sv.player.getPlayerState();
+        if (state !== 1) {
+            sv.player.playVideo();
+            $('#home-hero-video').click();
+            $timeout(ensureVideoIsPlaying, 100);
+        } else {
+            videoIsReady();
         }
+    }
+
+    /**
+     * @name videoIsReady
+     * @function
+     * @memberOf HomeCtrl
+     * @description Updates the UI to display the video when ready
+     */
+    function videoIsReady() {
+        $scope.$apply(function(){
+            sv.video_ready = true;
+        });
     }
 
     /**
@@ -113,13 +157,13 @@ function HomeCtrl ($scope, $timeout, $interval) {
      *              background video.
      */
     $scope.toggleVideoSound = function() {
-        if (sv.video.muted) {
-            sv.video.player.unMute();
-            sv.video.muted = false;
+        if (sv.video_muted) {
+            sv.player.unMute();
+            sv.video_muted = false;
         }
         else {
-            sv.video.player.mute();
-            sv.video.muted = true;
+            sv.player.mute();
+            sv.video_muted = true;
         }
     }
 

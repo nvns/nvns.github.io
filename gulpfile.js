@@ -12,8 +12,7 @@ const jsFiles = '_assets/**/*.js';
 const vendorJsFiles = [
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
-    'node_modules/angular/angular.min.js',
-    'node_modules/angular-youtube-embed/dist/angular-youtube-embed.min.js'
+    'node_modules/angular/angular.min.js'
 ];
 const vendorCssFiles = [
     'node_modules/bootstrap/dist/css/bootstrap.min.css',
