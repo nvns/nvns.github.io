@@ -3,11 +3,10 @@ nvns.nvnsApp.controller('HomeCtrl', HomeCtrl);
 HomeCtrl.$inject = [
     '$scope',
     '$timeout',
-    '$interval',
     '$window'
 ];
 
-function HomeCtrl ($scope, $timeout, $interval, $window) {
+function HomeCtrl ($scope, $timeout, $window) {
 
     var sv  = $scope.vars = {
         scrolled: false,
