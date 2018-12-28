@@ -29,9 +29,8 @@ function HomeCtrl ($scope, $timeout, $window, $sce) {
 
     var sv  = $scope.vars = {
         scrolled: false,
-        show_audio_controls: false,
         video_ready: false,
-        player: null,
+        video_player: null,
         video_muted: true,
         video_object: {
             videoId: sc.bg_videos[sc.selected_bg_video_index].youtube_id,
@@ -100,7 +99,7 @@ function HomeCtrl ($scope, $timeout, $window, $sce) {
      * @description Callback for youtube api ready
      */
     function initPlayer() {
-        sv.player = new YT.Player('home-hero-video', sv.video_object);
+        sv.video_player = new YT.Player('home-hero-video', sv.video_object);
     }
 
     /**
@@ -111,7 +110,7 @@ function HomeCtrl ($scope, $timeout, $window, $sce) {
      * @param {object} e - The event object
      */
     function onPlayerReady(e) {
-        sv.player.mute();
+        sv.video_player.mute();
     }
 
     /**
@@ -147,9 +146,9 @@ function HomeCtrl ($scope, $timeout, $window, $sce) {
      * @description Ensures the video is playing
      */
     function ensureVideoIsPlaying() {
-        var state = sv.player.getPlayerState();
+        var state = sv.video_player.getPlayerState();
         if (state !== 1) {
-            sv.player.playVideo();
+            sv.video_player.playVideo();
             $('#home-hero-video').click();
             $timeout(ensureVideoIsPlaying, 100);
         } else {
@@ -199,11 +198,11 @@ function HomeCtrl ($scope, $timeout, $window, $sce) {
      */
     $scope.toggleVideoSound = function() {
         if (sv.video_muted) {
-            sv.player.unMute();
+            sv.video_player.unMute();
             sv.video_muted = false;
         }
         else {
-            sv.player.mute();
+            sv.video_player.mute();
             sv.video_muted = true;
         }
     }
