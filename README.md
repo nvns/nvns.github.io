@@ -1,7 +1,7 @@
 noevalleynurseryschool.github.io
 ================================
 
-This website was created by [Chris Yap](https://www.chrisyap.com) (Enso's dad!).  Feel free to get in touch with any issues or questions.
+This website was created by [Chris Yap](https://www.chrisyap.com) (Enso and Esme's dad!).  Feel free to get in touch with any issues or questions.
 
 ## Full environment dependencies
 
