@@ -32,10 +32,7 @@ RUN npm install -g bower gulp
 RUN gem update --system
 RUN gem install bundler
 
-RUN git clone https://github.com/nvns/nvns.github.io
-WORKDIR /nvns.github.io
-RUN npm install --no-audit
-RUN bundle install
-RUN bundle update
+VOLUME /src
+EXPOSE 4000
 
-CMD ["/bin/bash", "-c", "cd /nvns.github.io && LC_CTYPE=en_US.UTF-8 LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 /usr/bin/gulp"]
+CMD ["/bin/bash", "-c", "cd /src && npm install --no-audit && bundle install && bundle update && LC_CTYPE=en_US.UTF-8 LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 exec gulp"]
