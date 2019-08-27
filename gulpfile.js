@@ -73,7 +73,8 @@ gulp.task('jekyll', () => {
         'serve',
         '--watch',
         '--incremental',
-        '--drafts'
+        '--drafts',
+        '--host', '0.0.0.0'
     ]);
 
     const jekyllLogger = (buffer) => {

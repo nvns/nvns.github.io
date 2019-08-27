@@ -10,7 +10,7 @@ exclude:
     - Gemfile
     - Gemfile.lock
     - CNAME
-gems:
+plugins:
     - jekyll-sitemap
 sass:
     style: compressed
