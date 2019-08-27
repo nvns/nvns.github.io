@@ -35,6 +35,14 @@ If you are running Mac OS X, Ruby is probably already installed on your system.
 6. Run `gulp`.
 7. Point your browser to `http://localhost:4000`
 
+## Running the environment in Docker
+
+1. Clone the git repository to your system.
+2. Enter the $repo/docker directory.
+3. Run `build_container.sh`
+4. Run `run_docker.sh`
+5. Point your browser to the URL shown in the output.
+
 ## Site maintenance
 
 ### Overview

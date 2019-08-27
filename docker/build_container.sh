@@ -1,3 +1,5 @@
 #!/bin/bash
 
-docker build -t nvns .
+test -z "${1}" && cache="" || cache="--no-cache"
+
+docker build ${cache} -t nvns .

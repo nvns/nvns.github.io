@@ -2,14 +2,15 @@ name: Noe Valley Nursery School
 description: Web Developer from Somewhere
 markdown: kramdown
 exclude:
-    - package.json
-    - node_modules
-    - gulpfile.js
     - bower.json
-    - README.md
+    - docker
+    - gulpfile.js
+    - node_modules
+    - package.json
+    - CNAME
     - Gemfile
     - Gemfile.lock
-    - CNAME
+    - README.md
 plugins:
     - jekyll-sitemap
 sass:
