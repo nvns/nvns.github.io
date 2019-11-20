@@ -10,7 +10,7 @@
   "author": "Christopher Yap",
   "license": "MIT",
   "dependencies": {
-    "angular": "~1.6.2",
+    "angular": "~1.7.9",
     "bootstrap": "~3.4.1",
     "font-awesome": "~4.7.0",
     "jquery": "^3.4.0"
