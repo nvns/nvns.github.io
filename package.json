@@ -13,13 +13,14 @@
     "angular": "~1.7.9",
     "bootstrap": "~3.4.1",
     "font-awesome": "~4.7.0",
-    "jquery": "^3.4.0"
+    "jquery": "^3.5.0"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-concat": "~2.6.1",
     "gulp-sourcemaps": "~2.4.1",
     "gulp-uglify": "~2.0.1",
-    "gulp-util": "~3.0.8"
+    "gulp-util": "~3.0.8",
+    "minimist": "^1.2.5"
   }
 }
