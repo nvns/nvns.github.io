@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:bionic as build
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -31,6 +31,10 @@ RUN npm install -g bower gulp
 # https://bundler.io/blog/2019/05/14/solutions-for-cant-find-gem-bundler-with-executable-bundle.html
 RUN gem update --system
 RUN gem install bundler
+
+
+FROM scratch
+COPY --from=build / /
 
 VOLUME /src
 WORKDIR /src
