@@ -1,7 +1,6 @@
 ---
 label: NVNS Front Matter
 hide_body: false
-is_partial: false
 fields:
 - type: select
   config:
