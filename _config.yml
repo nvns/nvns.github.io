@@ -3,6 +3,7 @@ description: Web Developer from Somewhere
 markdown: kramdown
 exclude:
     - bower.json
+    - vendor
     - docker
     - gulpfile.js
     - node_modules
